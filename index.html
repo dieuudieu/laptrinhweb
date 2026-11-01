@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đà Lạt – Thành phố sương mù trên cao nguyên Lâm Viên</title>
+  <meta name="description" content="Giới thiệu du lịch Đà Lạt: điểm đến, lịch trình, thư viện ảnh và kinh nghiệm đi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a class="logo" href="#top">Đà Lạt</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#diem-den">Điểm đến</a>
+      <a href="#lich-trinh">Lịch trình</a>
+      <a href="#thu-vien">Hình ảnh</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-sub">Cao nguyên Lâm Viên, độ cao khoảng 1.500 m</p>
+        <h1>Đà Lạt, nơi buổi sáng bắt đầu bằng sương</h1>
+        <a class="btn" href="#diem-den">Xem các điểm đến</a>
+      </div>
+      <svg class="hills" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+        <path class="h1" d="M0,120 C150,60 300,150 450,110 C600,70 750,140 900,100 C1020,70 1120,100 1200,80 L1200,220 L0,220Z"/>
+        <path class="h2" d="M0,160 C200,110 350,190 550,150 C750,110 950,190 1200,140 L1200,220 L0,220Z"/>
+        <path class="h3" d="M0,195 C250,165 500,215 750,190 C950,170 1100,200 1200,185 L1200,220 L0,220Z"/>
+      </svg>
+    </section>
+
+    <!-- GIỚI THIỆU -->
+    <section class="section" id="gioi-thieu">
+      <div class="container intro">
+        <div>
+          <h2>Vài điều cần biết về Đà Lạt</h2>
+          <p>Đà Lạt là thành phố của tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên ở Tây Nguyên. Nhờ độ cao, khí hậu ở đây mát quanh năm, nhiệt độ trung bình chỉ khoảng 18–21°C.</p>
+          <p>Thành phố được người Pháp quy hoạch từ đầu thế kỷ 20 làm nơi nghỉ dưỡng, nên còn nhiều biệt thự cổ, nhà ga và con đường thông xanh. Ngày nay Đà Lạt còn nổi tiếng với hoa, rau củ, cà phê và các quán nhỏ trên đồi.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Mùa đẹp nhất</dt><dd>Tháng 11 đến tháng 3 (nắng nhẹ, hoa nở nhiều)</dd></div>
+          <div><dt>Mùa mưa</dt><dd>Tháng 5 đến tháng 10</dd></div>
+          <div><dt>Cách TP. Hồ Chí Minh</dt><dd>Khoảng 300 km, đi xe 6–7 tiếng</dd></div>
+          <div><dt>Sân bay</dt><dd>Liên Khương, cách trung tâm khoảng 30 km</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ĐIỂM ĐẾN -->
+    <section class="section alt" id="diem-den">
+      <div class="container">
+        <h2>Điểm đến nên ghé</h2>
+        <div class="filters" id="filters" role="group" aria-label="Lọc điểm đến">
+          <button class="chip active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="thien-nhien">Thiên nhiên</button>
+          <button class="chip" data-filter="van-hoa">Văn hóa</button>
+          <button class="chip" data-filter="am-thuc">Ẩm thực</button>
+        </div>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- LỊCH TRÌNH -->
+    <section class="section" id="lich-trinh">
+      <div class="container">
+        <h2>Gợi ý lịch trình</h2>
+        <div class="tabs" id="tabs" role="tablist">
+          <button class="tab active" role="tab" data-day="2n1d">2 ngày 1 đêm</button>
+          <button class="tab" role="tab" data-day="3n2d">3 ngày 2 đêm</button>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- THƯ VIỆN ẢNH -->
+    <section class="section alt" id="thu-vien">
+      <div class="container">
+        <h2>Hình ảnh</h2>
+        <p class="note">Bấm vào ảnh để xem lớn. Dùng phím ← → để chuyển ảnh, phím Esc để đóng.</p>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <section class="section" id="lien-he">
+      <div class="container contact">
+        <div>
+          <h2>Gửi câu hỏi về chuyến đi</h2>
+          <p>Điền thông tin bên cạnh, mình sẽ trả lời qua email trong thời gian sớm nhất.</p>
+        </div>
+        <form id="form" novalidate>
+          <label for="name">Họ và tên</label>
+          <input id="name" name="name" type="text" autocomplete="name">
+          <small class="error" id="nameErr"></small>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email">
+          <small class="error" id="emailErr"></small>
+
+          <label for="msg">Nội dung</label>
+          <textarea id="msg" name="msg" rows="4"></textarea>
+          <small class="error" id="msgErr"></small>
+
+          <button class="btn" type="submit">Gửi câu hỏi</button>
+          <p class="success" id="success" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>2026 Giới thiệu du lịch Đà Lạt.</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Đóng">&times;</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Ảnh trước">&#8249;</button>
+    <figure>
+      <div class="lb-img" id="lbImg"></div>
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav next" id="lbNext" aria-label="Ảnh sau">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
